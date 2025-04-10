@@ -12,8 +12,14 @@ struct ContentView: View {
                 .textFieldStyle(.roundedBorder)
                 
         }
-        Button("Calculate"){
-            answer = (number1 ?? 0) + (number2 ?? 0)
+        HStack{
+            Button("Add"){
+                answer = (number1 ?? 0) + (number2 ?? 0)
+            }
+            Button("Subtract"){
+                answer = (number1 ?? 0) - (number2 ?? 0)
+            }
+
         }
         Text("Answer: \(answer)")
             .font(.custom("Verdana", size: 30))
