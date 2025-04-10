@@ -7,16 +7,16 @@ struct ContentView: View {
     var body: some View {
         HStack{
             TextField("Enter Number 1", value: $number1, format: .number)
-               
+                .textFieldStyle(.roundedBorder)
             TextField("Enter Number 2", value: $number2, format: .number)
-                
+                .textFieldStyle(.roundedBorder)
                 
         }
         Button("Calculate"){
             answer = (number1 ?? 0) + (number2 ?? 0)
         }
         Text("Answer: \(answer)")
-            .bold()
+            .font(.custom("Verdana", size: 30))
             
     }
 }
