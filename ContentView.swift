@@ -12,13 +12,28 @@ struct ContentView: View {
                 .textFieldStyle(.roundedBorder)
                 
         }
-        HStack{
-            Button("Add"){
-                answer = (number1 ?? 0) + (number2 ?? 0)
+        VStack{
+            HStack{
+                Button("Add"){
+                    answer = (number1 ?? 0) + (number2 ?? 0)
+                }
+                Button("Subtract"){
+                    answer = (number1 ?? 0) - (number2 ?? 0)
+                }
             }
-            Button("Subtract"){
-                answer = (number1 ?? 0) - (number2 ?? 0)
-            }
+                HStack{
+                    Button("Multiply"){
+                        answer = (number1 ?? 0) * (number2 ?? 0)
+                    }
+                    Button("Divide"){
+                        answer = (number1 ?? 0) / (number2 ?? 0)
+                    }
+                }
+            
+             
+
+
+            
 
         }
         Text("Answer: \(answer)")
